@@ -112,7 +112,7 @@ button {
 }
 .user-avatar {
   float: right;
-  padding-top: 2px;
+  margin-top: 4px;
 }
 .logout {
   float: right;
@@ -254,7 +254,7 @@ button.disabled {
 .option-container.selected {
   border-color: transparent;
   color: #fff;
-  background: #c1571a;
+  background: #00897b;
 }
 
 .option {
@@ -262,7 +262,7 @@ button.disabled {
   cursor: pointer;
 }
 .option-selected {
-  color: #c1571a;
+  color: #00897b;
 }
 .question-detail {
   height: 300px;

@@ -30,8 +30,8 @@ class QuestionDetail extends Component {
     });
   }
   render() {
-    if(this.props.loggedOut){
-      return <LoginRedirect afterLogin={`/auestions/${this.props.qid}`}/>
+    if (this.props.loggedOut) {
+      return <LoginRedirect afterLogin={`/questions/${this.props.qid}`} />;
     }
     const {
       question,
@@ -52,7 +52,7 @@ class QuestionDetail extends Component {
     }
     return (
       <div className="content">
-      <Nav/>
+        <Nav />
 
         <div className={answered ? "title-item question-detail" : "title-item"}>
           {answered ? (
@@ -94,7 +94,8 @@ class QuestionDetail extends Component {
                 >
                   {question.optionTwo.text}
                 </div>
-                <button style={{marginBottom: "15px"}}
+                <button
+                  style={{ marginBottom: "15px" }}
                   className={selectedAnswer ? "btn-active" : "disabled"}
                   onClick={(e) => {
                     this.handleSaveAnswer(e);
@@ -121,7 +122,6 @@ class QuestionDetail extends Component {
                     </div>
                     <div>Percentage votes: {percentageOptionOne}%</div>
                   </div>
-                  <div className="your-vote">Your pick</div>
                 </div>
 
                 <div
@@ -139,7 +139,6 @@ class QuestionDetail extends Component {
                     </div>
                     <div>Percentage votes: {percentageOptionTwo}%</div>
                   </div>
-                  <div className="your-vote">Your pick</div>
                 </div>
               </div>
             )}
@@ -184,7 +183,7 @@ function mapStateToProps(
     totalVotes,
     percentageOptionOne,
     percentageOptionTwo,
-    
+    authorAvatar: users[question["author"]]["avatarURL"],
   };
 }
 export default connect(mapStateToProps)(QuestionDetail);
