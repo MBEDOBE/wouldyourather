@@ -170,7 +170,7 @@ function mapStateToProps(
 
   //get answer of authedUser
   const answer = users[authedUser].answers[id];
-
+  // avatars from https://tylermcginnis.com/would-you-rather
   return {
     id,
     authedUser,

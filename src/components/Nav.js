@@ -9,10 +9,11 @@ class Nav extends Component {
     this.props.dispatch(setAuthedUser(null));
   };
   render() {
-    const { user, authedUser } = this.props;
+    const { user } = this.props;
     const userAvatar = user ? user.avatarURL : "a";
     const name = user ? user.name : "";
     return (
+      // avatars from https://tylermcginnis.com/would-you-rather
       <nav className="nav">
         <ul className="nav-list">
           <li className="nav-item">

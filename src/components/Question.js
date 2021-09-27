@@ -35,7 +35,7 @@ function mapStateToProps(
 ) {
   const question = questions[id];
   const author = question ? users[question.author] : null;
-
+  // avatars from https://tylermcginnis.com/would-you-rather
   return {
     authedUser,
     question,

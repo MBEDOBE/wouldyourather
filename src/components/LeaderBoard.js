@@ -17,7 +17,7 @@ class LeaderBoard extends Component {
     if (this.props.loggedOut) {
       return <LoginRedirect afterLogin="/leaderboard" />;
     }
-
+    // avatars from https://tylermcginnis.com/would-you-rather
     const { leaderboard } = this.props;
     return (
       <div className="leaderboard">
