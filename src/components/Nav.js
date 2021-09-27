@@ -26,7 +26,7 @@ class Nav extends Component {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink to="leaderboard" exact activeClassName="active">
+            <NavLink to="/leaderboard" exact activeClassName="active">
               Leaderboard
             </NavLink>
           </li>
@@ -41,7 +41,7 @@ class Nav extends Component {
               Log out
             </NavLink>
           </li>
-          <li className='user-greeting'>
+          <li className="user-greeting">
             <span>{name}</span>
           </li>
           <li>
