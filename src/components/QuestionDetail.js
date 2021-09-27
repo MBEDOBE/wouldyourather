@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Redirect } from "react-router-dom";
 import { handleAddAnswer } from "../actions/questions";
-import LoginRedirect from "./LoginRedirect";
 import Nav from "./Nav";
 
 class QuestionDetail extends Component {
@@ -30,9 +29,9 @@ class QuestionDetail extends Component {
     });
   }
   render() {
-    if (this.props.loggedOut) {
+    /* if (this.props.loggedOut) {
       return <LoginRedirect afterLogin={`/questions/${this.props.qid}`} />;
-    }
+    } */
     const {
       question,
       author,

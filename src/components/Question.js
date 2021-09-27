@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 
 class Question extends Component {
   render() {
-    const { question, author, authorAvatar } = this.props;
+    const { question, author, authorAvatar, pathID } = this.props;
     return (
       <div className="title-item">
         <div className="header">{author.name} would like to know if you:</div>
