@@ -8,7 +8,7 @@ import Dashboard from "./Dashboard";
 import QuestionDetail from "./QuestionDetail";
 import NewQuestion from "./NewQuestion";
 import LeaderBoard from "./LeaderBoard";
-import NotFound from './NotFound'
+import NotFound from "./NotFound";
 
 class App extends Component {
   componentDidMount() {
@@ -22,11 +22,13 @@ class App extends Component {
             <div className="main-content">
               <Switch>
                 <Route path="/" exact component={Login} />
+
                 <Route path="/dashboard" exact component={Dashboard} />
                 <Route path="/add" exact component={NewQuestion} />
                 <Route path="/question/:id" component={QuestionDetail} />
-                <Route path="/leaderboard" component={LeaderBoard} />
-                <Route path='/not-found' component={NotFound}/>
+                <Route exact path="/leaderboard" component={LeaderBoard} />
+
+                <Route path="/not-found" component={NotFound} />
               </Switch>
             </div>
           </div>
