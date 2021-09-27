@@ -3,13 +3,13 @@ import { Redirect } from "react-router-dom";
 
 class LoginRedirect extends Component {
   render() {
-    const { afterLogin } = this.props;
+    const { from } = this.props;
     return (
       <Redirect
         to={{
           pathname: "/",
           state: {
-            afterLogin,
+            from,
           },
         }}
       />

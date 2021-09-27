@@ -9,6 +9,7 @@ import QuestionDetail from "./QuestionDetail";
 import NewQuestion from "./NewQuestion";
 import LeaderBoard from "./LeaderBoard";
 import NotFound from "./NotFound";
+import ProtectedRoute from "./ProtectedRoute";
 
 class App extends Component {
   componentDidMount() {
@@ -23,11 +24,17 @@ class App extends Component {
               <Switch>
                 <Route path="/" exact component={Login} />
 
-                <Route path="/dashboard" exact component={Dashboard} />
-                <Route path="/add" exact component={NewQuestion} />
-                <Route path="/question/:id" component={QuestionDetail} />
-                <Route exact path="/leaderboard" component={LeaderBoard} />
-
+                <ProtectedRoute path="/dashboard" exact component={Dashboard} />
+                <ProtectedRoute path="/add" exact component={NewQuestion} />
+                <ProtectedRoute
+                  path="/question/:id"
+                  component={QuestionDetail}
+                />
+                <ProtectedRoute
+                  exact
+                  path="/leaderboard"
+                  component={LeaderBoard}
+                />
                 <Route path="/not-found" component={NotFound} />
               </Switch>
             </div>

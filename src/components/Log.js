@@ -43,15 +43,18 @@ class Login extends Component {
   render() {
     const { userId } = this.state;
     const { users } = this.props;
-    
-    let afterLogin = "/dashboard";
-    if(this.props.location.state){
-      afterLogin = this.props.location.state.afterLogin;
-    }
+
+    /* let afterLogin = "/dashboard";
+     if(this.props.location.state){
+       afterLogin = this.props.location.state.afterLogin;
+     } */
+    const { from } = this.props.location.state || {
+      from: { pathname: "/dashboard" },
+    };
     const selected = userId ? userId : -1;
 
     if (this.state.loggedIn) {
-      return <Redirect to={afterLogin} />;
+      return <Redirect to={from} />;
     }
 
     return (
